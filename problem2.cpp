@@ -9,6 +9,33 @@
 // for the purpose of this example, but you should pay
 // attention to the performance implications.
 
+struct Images{};
+
+const uint8 maxSize = 10;
+
+class Cache {
+
+  private:
+    std::list<Images> mImages;
+    uint8 size =0;
+  public:
+    Cache()
+    {
+    }
+
+    void AddElement(const Images& image)
+    {
+      if(size == maxSize)
+      {
+        mImages.pop_front();
+        size--;
+      }
+      mImages.push_back(image);
+      size++;
+    }
+}
+
 void RunProblem2() {
     std::cout << "Problem 2 😳\n\n";
+  
 }

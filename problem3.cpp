@@ -40,10 +40,29 @@ void printList(Node* root) {
 }
 
 Node* findMid(Node* root) {
-    // Implement
-    return root;
+  int length = 0;
+  Node* retValue = root;
+    for (Node* current = root; current!= nullptr;) { 
+      current = current->next; 
+      length++;
+    }
+    int aux = 0;
+    for(Node* current = root; aux < length/2;)
+    {
+      current = current->next; 
+      aux++;
+      if(aux == (length/2)-1)
+        retValue = current;
+    }
+    return retValue;
 }
 
 void destroyList(Node* root) {
-    // Implement
+    Node* auxValue = root;
+  for (Node* current = root; current!= nullptr;)
+    {
+      auxValue = current->next;
+      delete current;
+      current = auxValue;
+    }
 }

@@ -6,7 +6,7 @@
 int main() {
     std::cout << "Coding Challenge Version: 🙀 π\n\n";
 
-    RunProblem1();
-    RunProblem2();
+    //RunProblem1();
+    //RunProblem2();
     RunProblem3();
 }
